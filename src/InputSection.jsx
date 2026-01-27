@@ -1,6 +1,11 @@
-import Input from "./input";
+import { useState } from "react";
 
-export function InputSection({ inputs }) {
+import Input from "./input";
+import { InputSectionHeader } from "./InputSectionHeader";
+
+export function InputSection({ inputs, sectionName }) {
+   const [showInputs, setShowInputs] = useState(true);
+
    const inputFields = inputs.map((input) => (
       <li key={input.id}>
          <Input
@@ -14,7 +19,11 @@ export function InputSection({ inputs }) {
 
    return (
       <div className="input-section">
-         <ul>{inputFields}</ul>
+         <InputSectionHeader
+            name={sectionName}
+            setShowInputs={setShowInputs}
+         ></InputSectionHeader>
+         {showInputs && <ul>{inputFields}</ul>}
       </div>
    );
 }

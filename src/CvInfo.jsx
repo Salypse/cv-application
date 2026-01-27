@@ -7,9 +7,18 @@ import { InputSection } from "./InputSection";
 function CvInfo() {
    return (
       <>
-         <InputSection inputs={personalInputFields}></InputSection>
-         <InputSection inputs={educationalInputFields}></InputSection>
-         <InputSection inputs={experienceInputFields}></InputSection>
+         <InputSection
+            sectionName="Personal"
+            inputs={personalInputFields}
+         ></InputSection>
+         <InputSection
+            sectionName="Education"
+            inputs={educationalInputFields}
+         ></InputSection>
+         <InputSection
+            sectionName="Experience"
+            inputs={experienceInputFields}
+         ></InputSection>
       </>
    );
 }
