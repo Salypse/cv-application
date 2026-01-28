@@ -1,21 +1,17 @@
 import { useState } from "react";
 
-import Input from "./input";
+import { Input } from "./input";
 import { InputSectionHeader } from "./InputSectionHeader";
 
 export function InputSection({ inputs, sectionName }) {
    const [showInputs, setShowInputs] = useState(true);
 
-   const inputFields = inputs.map((input) => (
-      <li key={input.id}>
-         <Input
-            inputName={input.name}
-            placeholder={input.placeholder}
-            type={input.type}
-            id={input.id}
-         ></Input>
-      </li>
-   ));
+   const [inputFieldData, setInputFieldData] = useState(
+      inputs.map((input) => ({
+         ...input,
+         value: "",
+      })),
+   );
 
    return (
       <div className="input-section">
@@ -23,7 +19,21 @@ export function InputSection({ inputs, sectionName }) {
             name={sectionName}
             setShowInputs={setShowInputs}
          ></InputSectionHeader>
-         {showInputs && <ul>{inputFields}</ul>}
+         {showInputs && (
+            <ul>
+               {inputFieldData.map((input) => (
+                  <Input
+                     inputName={input.name}
+                     placeholder={input.placeholder}
+                     type={input.type}
+                     id={input.id}
+                     value={input.value}
+                     inputData={inputFieldData}
+                     setInputData={setInputFieldData}
+                  ></Input>
+               ))}
+            </ul>
+         )}
       </div>
    );
 }
