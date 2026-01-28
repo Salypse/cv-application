@@ -1,23 +1,29 @@
-import { personalInputFields } from "./data/personalInputFields";
-import { educationalInputFields } from "./data/educationInputFields";
-import { experienceInputFields } from "./data/experienceInputFields";
-
 import { InputSection } from "./InputSection";
 
-function CvInfo() {
+function CvInfo({
+   personalInputData,
+   setPersonalInputData,
+   educationalInputData,
+   setEducationalInputData,
+   experienceInputData,
+   setExperienceInputData,
+}) {
    return (
       <>
          <InputSection
+            inputData={personalInputData}
+            setInputData={setPersonalInputData}
             sectionName="Personal"
-            inputs={personalInputFields}
          ></InputSection>
          <InputSection
+            inputData={educationalInputData}
+            setInputData={setEducationalInputData}
             sectionName="Education"
-            inputs={educationalInputFields}
          ></InputSection>
          <InputSection
+            inputData={experienceInputData}
+            setInputData={setExperienceInputData}
             sectionName="Experience"
-            inputs={experienceInputFields}
          ></InputSection>
       </>
    );

@@ -3,15 +3,8 @@ import { useState } from "react";
 import { Input } from "./input";
 import { InputSectionHeader } from "./InputSectionHeader";
 
-export function InputSection({ inputs, sectionName }) {
+export function InputSection({ inputData, setInputData, sectionName }) {
    const [showInputs, setShowInputs] = useState(true);
-
-   const [inputFieldData, setInputFieldData] = useState(
-      inputs.map((input) => ({
-         ...input,
-         value: "",
-      })),
-   );
 
    return (
       <div className="input-section">
@@ -21,7 +14,7 @@ export function InputSection({ inputs, sectionName }) {
          ></InputSectionHeader>
          {showInputs && (
             <ul>
-               {inputFieldData.map((input) => (
+               {inputData.map((input) => (
                   <li key={input.id}>
                      <Input
                         inputName={input.name}
@@ -29,8 +22,8 @@ export function InputSection({ inputs, sectionName }) {
                         type={input.type}
                         id={input.id}
                         value={input.value}
-                        inputData={inputFieldData}
-                        setInputData={setInputFieldData}
+                        inputData={inputData}
+                        setInputData={setInputData}
                      ></Input>
                   </li>
                ))}

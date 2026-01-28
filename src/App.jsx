@@ -1,9 +1,46 @@
+import { useState } from "react";
+
 import CvInfo from "./CvInfo";
 
+import { personalInputFields } from "./data/personalInputFields";
+import { educationalInputFields } from "./data/educationInputFields";
+import { experienceInputFields } from "./data/experienceInputFields";
+
 export function App() {
+   const [personalInputData, setPersonalInputData] = useState(
+      personalInputFields.map((field) => ({
+         ...field,
+         value: "",
+      })),
+   );
+
+   const [educationalInputData, setEducationalInputData] = useState(
+      educationalInputFields.map((field) => ({
+         ...field,
+         value: "",
+      })),
+   );
+
+   const [experienceInputData, setExperienceInputData] = useState(
+      experienceInputFields.map((field) => ({
+         ...field,
+         value: "",
+      })),
+   );
+
    return (
       <>
-         <CvInfo></CvInfo>
+         <CvInfo
+            //Personal Input
+            personalInputData={personalInputData}
+            setPersonalInputData={setPersonalInputData}
+            //Educational Input
+            educationalInputData={educationalInputData}
+            setEducationalInputData={setEducationalInputData}
+            //Experience Input
+            experienceInputData={experienceInputData}
+            setExperienceInputData={setExperienceInputData}
+         ></CvInfo>
       </>
    );
 }
