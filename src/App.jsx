@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import CvInfo from "./CvInfo";
+import { PreviewSection } from "./PreviewSection";
 
 import { personalInputFields } from "./data/personalInputFields";
 import { educationalInputFields } from "./data/educationInputFields";
@@ -41,6 +42,10 @@ export function App() {
             experienceInputData={experienceInputData}
             setExperienceInputData={setExperienceInputData}
          ></CvInfo>
+
+         <PreviewSection inputData={personalInputData}></PreviewSection>
+         <PreviewSection inputData={educationalInputData}></PreviewSection>
+         <PreviewSection inputData={experienceInputData}></PreviewSection>
       </>
    );
 }
