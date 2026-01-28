@@ -22,15 +22,17 @@ export function InputSection({ inputs, sectionName }) {
          {showInputs && (
             <ul>
                {inputFieldData.map((input) => (
-                  <Input
-                     inputName={input.name}
-                     placeholder={input.placeholder}
-                     type={input.type}
-                     id={input.id}
-                     value={input.value}
-                     inputData={inputFieldData}
-                     setInputData={setInputFieldData}
-                  ></Input>
+                  <li key={input.id}>
+                     <Input
+                        inputName={input.name}
+                        placeholder={input.placeholder}
+                        type={input.type}
+                        id={input.id}
+                        value={input.value}
+                        inputData={inputFieldData}
+                        setInputData={setInputFieldData}
+                     ></Input>
+                  </li>
                ))}
             </ul>
          )}
