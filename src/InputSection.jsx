@@ -13,7 +13,7 @@ export function InputSection({ inputData, setInputData, sectionName }) {
             setShowInputs={setShowInputs}
          ></InputSectionHeader>
          {showInputs && (
-            <ul>
+            <ul id={`${sectionName.toLowerCase()}-inputs`}>
                {inputData.map((input) => (
                   <li key={input.id}>
                      <Input

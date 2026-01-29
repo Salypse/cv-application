@@ -12,6 +12,12 @@ export const personalInputFields = [
       id: "personal-number-input",
    },
    {
+      name: "Location",
+      placeholder: "e.g. Chicago, Il",
+      type: "text",
+      id: "personal-location-input",
+   },
+   {
       name: "Email",
       placeholder: "e.g. johnSmith123@gmail.com",
       type: "email",

@@ -9,7 +9,7 @@ function CvInfo({
    setExperienceInputData,
 }) {
    return (
-      <>
+      <div className="cv-info">
          <InputSection
             inputData={personalInputData}
             setInputData={setPersonalInputData}
@@ -25,7 +25,7 @@ function CvInfo({
             setInputData={setExperienceInputData}
             sectionName="Experience"
          ></InputSection>
-      </>
+      </div>
    );
 }
 
