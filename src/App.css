@@ -1,0 +1,68 @@
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+#root {
+   width: 100%;
+   height: auto;
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+ul {
+   list-style-type: none;
+}
+
+.cv-info {
+   width: 95%;
+   height: auto;
+
+   margin-top: 5vh;
+   padding: 2vw;
+
+   border: 1vw solid black;
+}
+
+.input-section {
+   margin-bottom: 3vh;
+}
+
+.input-section-header {
+   display: flex;
+   justify-content: space-between;
+
+   margin-bottom: 1vh;
+}
+
+.input-header-buttons {
+   display: flex;
+   gap: 2vw;
+}
+
+.input-field {
+   display: flex;
+   flex-direction: column;
+
+   margin: 0 0 1vh 0;
+}
+
+.input-field input {
+   width: 100%;
+   padding: 1vw;
+}
+
+.input-section ul {
+   display: grid;
+   gap: 2vw;
+   grid-template-columns: repeat(2, 1fr);
+}
+
+#personal-inputs li:nth-child(1),
+#personal-inputs li:nth-child(4),
+#experience-inputs li:nth-child(3) {
+   grid-column: 1 / -1;
+}
