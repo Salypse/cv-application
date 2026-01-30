@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import { CvSiteHeader } from "./CvSiteHeader";
+import { ScrollText } from "./ScrollText";
 import CvInfo from "./CvInfo";
 import { PreviewSection } from "./PreviewSection";
 
@@ -33,6 +34,7 @@ export function App() {
    return (
       <>
          <CvSiteHeader></CvSiteHeader>
+         <ScrollText></ScrollText>
          <CvInfo
             //Personal Input
             personalInputData={personalInputData}

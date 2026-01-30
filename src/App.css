@@ -43,6 +43,26 @@ ul {
    padding: 0;
 }
 
+.scroll-text {
+   display: flex;
+   gap: 2vw;
+   align-items: center;
+   justify-content: center;
+
+   width: 100%;
+   padding: 1vw;
+   margin-top: 1vh;
+
+   text-decoration: underline;
+   font-weight: bold;
+   font-size: 1.2rem;
+}
+
+.scroll-text img {
+   width: 3vw;
+   height: auto;
+}
+
 .cv-info {
    width: 95%;
    height: auto;
