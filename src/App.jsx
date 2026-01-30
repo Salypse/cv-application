@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+import { CvSiteHeader } from "./CvSiteHeader";
 import CvInfo from "./CvInfo";
 import { PreviewSection } from "./PreviewSection";
 
@@ -31,6 +32,7 @@ export function App() {
 
    return (
       <>
+         <CvSiteHeader></CvSiteHeader>
          <CvInfo
             //Personal Input
             personalInputData={personalInputData}

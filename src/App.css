@@ -1,6 +1,7 @@
 :root {
    --white: #ffffff;
    --dark-white: #e2e2e2;
+   --dark-green: #054e23;
 }
 
 * {
@@ -21,6 +22,25 @@
 
 ul {
    list-style-type: none;
+}
+
+.maker-header {
+   display: flex;
+   align-items: center;
+   justify-content: start;
+
+   width: 100%;
+   padding: 1vw 1vw 1vw 0;
+
+   background-color: var(--dark-green);
+   color: var(--white);
+   font-size: clamp(0.8rem, 3.5vw, 1.2rem);
+}
+
+.maker-header img {
+   width: auto;
+   height: 6vh;
+   padding: 0;
 }
 
 .cv-info {
