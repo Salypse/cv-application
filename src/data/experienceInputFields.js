@@ -7,14 +7,13 @@ export const experienceInputFields = [
    },
    {
       name: "Position Title",
-      placeholder: "e.g. Front-end Web Developer",
+      placeholder: "e.g. UI/UX Designer",
       type: "text",
       id: "experience-position-input",
    },
    {
       name: "Responsibilities",
-      placeholder:
-         "e.g. Create front end of the site with given specifications",
+      placeholder: "e.g. Design usable and accesible website",
       type: "text",
       id: "experience-responsibilities-input",
    },

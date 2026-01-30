@@ -1,13 +1,13 @@
 export const educationalInputFields = [
    {
       name: "School Name",
-      placeholder: "e.g. Harvard University",
+      placeholder: "e.g. Harvard",
       type: "text",
       id: "educational-school-input",
    },
    {
       name: "Field of Study",
-      placeholder: "e.g. Computer Science",
+      placeholder: "e.g. Biology",
       type: "text",
       id: "educational-field-input",
    },
