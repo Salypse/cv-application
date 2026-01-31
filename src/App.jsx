@@ -47,9 +47,20 @@ export function App() {
             setExperienceInputData={setExperienceInputData}
          ></CvInfo>
 
-         <PreviewSection inputData={personalInputData}></PreviewSection>
-         <PreviewSection inputData={educationalInputData}></PreviewSection>
-         <PreviewSection inputData={experienceInputData}></PreviewSection>
+         <section className="live-preview">
+            <PreviewSection
+               inputData={personalInputData}
+               sectionName={"personal-input-preview"}
+            ></PreviewSection>
+            <PreviewSection
+               inputData={educationalInputData}
+               sectionName={"educational-input-preview"}
+            ></PreviewSection>
+            <PreviewSection
+               inputData={experienceInputData}
+               sectionName={"experience-input-preview"}
+            ></PreviewSection>
+         </section>
       </>
    );
 }

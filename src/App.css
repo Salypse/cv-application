@@ -22,6 +22,14 @@
 
 ul {
    list-style-type: none;
+
+   display: grid;
+   gap: 2vw;
+   grid-template-rows: repeat(3, auto);
+}
+
+li {
+   width: 100%;
 }
 
 .maker-header {
@@ -121,14 +129,7 @@ ul {
    margin-bottom: 0.3vh;
 }
 
-.input-section ul {
-   display: grid;
+.row {
+   display: flex;
    gap: 2vw;
-   grid-template-columns: repeat(2, 1fr);
-}
-
-#personal-inputs li:nth-child(1),
-#personal-inputs li:nth-child(4),
-#experience-inputs li:nth-child(3) {
-   grid-column: 1 / -1;
 }
