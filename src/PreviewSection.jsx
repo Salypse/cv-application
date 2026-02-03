@@ -8,7 +8,9 @@ export function PreviewSection({ inputData, sectionName }) {
                <div key={rowName} className={`row preview-${rowName}`}>
                   {rowItems.map((input) => (
                      <li key={input.id}>
-                        {input.img && <img src={input.img}></img>}
+                        {input.img && input.value && (
+                           <img src={input.img}></img>
+                        )}
                         <p>{input.value}</p>
                      </li>
                   ))}
