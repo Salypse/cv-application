@@ -53,6 +53,7 @@ export function App() {
                sectionName={"personal-input-preview"}
             ></PreviewSection>
             <PreviewSection
+               header="Education"
                inputData={educationalInputData}
                sectionName={"educational-input-preview"}
             ></PreviewSection>

@@ -1,8 +1,10 @@
 :root {
    --white: #ffffff;
    --dark-white: #e2e2e2;
+   --light-grey: #aaaaaa;
    --dark-green: #054e23;
    --dark-blue: #00004b;
+   --light-blue: #47479b;
 }
 
 * {
@@ -26,7 +28,6 @@ ul {
 
    display: grid;
    gap: 2vw;
-   grid-template-rows: repeat(3, auto);
 }
 
 li {
@@ -132,7 +133,9 @@ li {
 
 .row {
    display: flex;
+   padding: 1vw;
    gap: 2vw;
+   width: 100%;
 }
 
 .live-preview {
@@ -140,7 +143,6 @@ li {
    width: 95%;
 
    margin: 5vh 0;
-   padding: 3vw;
    background-color: var(--white);
 
    display: grid;
@@ -152,16 +154,23 @@ li {
    width: 100%;
 
    display: grid;
-   grid-template-columns: 1fr;
    align-items: center;
    justify-content: center;
    text-align: center;
 }
 
+.preview-section h2 {
+   margin-top: 2vh;
+   padding: 0 1vw;
+   color: var(--dark-blue);
+   font-weight: bold;
+   text-decoration: underline;
+   text-decoration-color: var(--light-blue);
+}
 .personal-input-preview {
+   grid-template-columns: 1fr;
    grid-template-rows: 1.5fr 1fr 1fr;
 
-   padding: 1vw;
    background-color: var(--dark-blue);
 
    font-size: clamp(1rem, 4vw, 1.3rem);
@@ -184,4 +193,33 @@ li {
    gap: 1vw;
    align-items: center;
    justify-content: center;
+}
+
+.educational-input-preview {
+   grid-template-rows: 1fr;
+   grid-template-columns: auto 1fr;
+
+   max-height: 20%;
+   margin: 2vw 0;
+   gap: 1vw;
+
+   font-size: clamp(1rem, 4vw, 1.3rem);
+   border-bottom: 0.5vh solid var(--light-grey);
+}
+
+.preview-education-date {
+   grid-row: 1 / 2;
+   align-self: flex-start;
+}
+
+.preview-school-info {
+   flex-direction: column;
+   align-self: flex-start;
+   text-align: left;
+}
+
+.preview-school-info li:nth-child(1) {
+   font-size: clamp(1.2rem, 5vw, 1.5rem);
+   color: var(--light-blue);
+   font-weight: bold;
 }
