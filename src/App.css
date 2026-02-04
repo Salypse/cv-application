@@ -212,6 +212,15 @@ li {
    align-self: flex-start;
 }
 
+.preview-education-date li + li {
+   display: flex;
+   gap: 2vw;
+}
+
+.preview-education-date li + li::before {
+   content: "-";
+}
+
 .preview-school-info {
    flex-direction: column;
    align-self: flex-start;
