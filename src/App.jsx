@@ -58,6 +58,7 @@ export function App() {
                sectionName={"educational-input-preview"}
             ></PreviewSection>
             <PreviewSection
+               header="Experience"
                inputData={experienceInputData}
                sectionName={"experience-input-preview"}
             ></PreviewSection>

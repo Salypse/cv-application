@@ -15,7 +15,7 @@ export const experienceInputFields = [
    },
    {
       name: "Responsibilities",
-      placeholder: "e.g. Design usable and accesible website",
+      placeholder: "e.g. Design usable and accessible website",
       type: "text",
       id: "experience-responsibilities-input",
       row: "responsibilities",

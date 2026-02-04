@@ -136,6 +136,7 @@ li {
    padding: 1vw;
    gap: 2vw;
    width: 100%;
+   text-align: left;
 }
 
 .live-preview {
@@ -185,6 +186,7 @@ li {
 
 .preview-name {
    font-size: clamp(1.5rem, 5vw, 1.8rem);
+   text-align: center;
 }
 
 .preview-availability li,
@@ -212,23 +214,58 @@ li {
    align-self: flex-start;
 }
 
-.preview-education-date li + li {
+.preview-education-date li + li,
+.preview-experience-date li + li {
    display: flex;
    gap: 2vw;
 }
 
-.preview-education-date li + li::before {
+.preview-education-date li + li::before,
+.preview-experience-date li + li::before {
    content: "-";
 }
 
 .preview-school-info {
    flex-direction: column;
    align-self: flex-start;
-   text-align: left;
 }
 
-.preview-school-info li:nth-child(1) {
+.preview-school-info li:nth-child(1),
+.preview-company-position li:nth-child(1) {
    font-size: clamp(1.2rem, 5vw, 1.5rem);
    color: var(--light-blue);
    font-weight: bold;
+}
+
+.experience-input-preview {
+   grid-template-rows: auto repeat(1, 1fr);
+   grid-template-columns: auto 1fr;
+
+   max-height: 25%;
+   margin: 2vw 0;
+   gap: 1vw;
+
+   font-size: clamp(1rem, 4vw, 1.3rem);
+   border-bottom: 0.5vh solid var(--light-grey);
+}
+
+.preview-experience-date {
+   display: flex;
+   align-self: flex-start;
+}
+
+.preview-company-position {
+   grid-area: 1 / 2 / 2 / -1;
+   display: flex;
+   flex-direction: column;
+   align-self: flex-start;
+   gap: 0;
+}
+
+.preview-company-position li + li {
+   font-size: clamp(1.1rem, 4vw, 1.4vw);
+}
+
+.preview-responsibilities {
+   grid-area: 2 / 2 / -1 / -1;
 }
