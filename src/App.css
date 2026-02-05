@@ -5,6 +5,8 @@
    --dark-green: #054e23;
    --dark-blue: #00004b;
    --light-blue: #47479b;
+
+   --input-preview-text: clamp(1rem, 4vw, 1.3rem);
 }
 
 * {
@@ -15,7 +17,6 @@
 
 #root {
    width: 100%;
-   height: auto;
 
    display: flex;
    flex-direction: column;
@@ -25,9 +26,6 @@
 
 ul {
    list-style-type: none;
-
-   display: grid;
-   gap: 2vw;
 }
 
 li {
@@ -37,7 +35,7 @@ li {
 .maker-header {
    display: flex;
    align-items: center;
-   justify-content: start;
+   justify-content: flex-start;
 
    width: 100%;
    padding: 1vw 1vw 1vw 0;
@@ -133,9 +131,11 @@ li {
 
 .row {
    display: flex;
+
    padding: 1vw;
-   gap: 2vw;
+   gap: 1vw;
    width: 100%;
+
    text-align: left;
 }
 
@@ -147,17 +147,26 @@ li {
    background-color: var(--white);
 
    display: grid;
-   grid-template-rows: 1fr 3fr 3fr;
+   grid-template-rows: auto auto 1fr;
 }
 
 .preview-section ul {
-   height: 100%;
-   width: 100%;
+   height: auto;
+   width: 95%;
 
    display: grid;
+   gap: 1vw;
    align-items: center;
    justify-content: center;
+   justify-self: center;
+
    text-align: center;
+   font-size: var(--input-preview-text);
+}
+
+.preview-section ul:not(:first-child) {
+   margin: 2vw 0;
+   border-bottom: 0.5vh solid var(--light-grey);
 }
 
 .preview-section h2 {
@@ -168,15 +177,25 @@ li {
    text-decoration: underline;
    text-decoration-color: var(--light-blue);
 }
+
 .personal-input-preview {
    grid-template-columns: 1fr;
    grid-template-rows: 1.5fr 1fr 1fr;
 
    background-color: var(--dark-blue);
 
-   font-size: clamp(1rem, 4vw, 1.3rem);
    font-weight: bold;
    color: var(--white);
+}
+
+.educational-input-preview {
+   grid-template-rows: 1fr;
+   grid-template-columns: auto 1fr;
+}
+
+.experience-input-preview {
+   grid-template-rows: auto repeat(1, 1fr);
+   grid-template-columns: auto 1fr;
 }
 
 .personal-input-preview img {
@@ -192,21 +211,9 @@ li {
 .preview-availability li,
 .preview-email li {
    display: flex;
-   gap: 1vw;
-   align-items: center;
    justify-content: center;
-}
-
-.educational-input-preview {
-   grid-template-rows: 1fr;
-   grid-template-columns: auto 1fr;
-
-   max-height: 20%;
-   margin: 2vw 0;
    gap: 1vw;
-
-   font-size: clamp(1rem, 4vw, 1.3rem);
-   border-bottom: 0.5vh solid var(--light-grey);
+   padding: 0;
 }
 
 .preview-education-date {
@@ -237,18 +244,6 @@ li {
    font-weight: bold;
 }
 
-.experience-input-preview {
-   grid-template-rows: auto repeat(1, 1fr);
-   grid-template-columns: auto 1fr;
-
-   max-height: 25%;
-   margin: 2vw 0;
-   gap: 1vw;
-
-   font-size: clamp(1rem, 4vw, 1.3rem);
-   border-bottom: 0.5vh solid var(--light-grey);
-}
-
 .preview-experience-date {
    display: flex;
    align-self: flex-start;
@@ -263,7 +258,7 @@ li {
 }
 
 .preview-company-position li + li {
-   font-size: clamp(1.1rem, 4vw, 1.4vw);
+   font-size: clamp(1.1rem, 4vw, 1.4rem);
 }
 
 .preview-responsibilities {
