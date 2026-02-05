@@ -126,7 +126,7 @@ li {
 .input-field label {
    font-size: clamp(1.1rem, 4vw, 1.6rem);
    font-weight: bold;
-   margin-bottom: 0.3vh;
+   margin-bottom: 0.5vh;
 }
 
 .row {
@@ -179,6 +179,7 @@ li {
 }
 
 .personal-input-preview {
+   min-width: 100%;
    grid-template-columns: 1fr;
    grid-template-rows: 1.5fr 1fr 1fr;
 
