@@ -4,21 +4,31 @@ export function Input({
    type = "text",
    id = "",
    value,
-   inputData,
    setInputData,
 }) {
    const inputId = `input-${id}`;
 
    const handleInputChange = (value, id) => {
-      const updatedInputData = inputData.map((input) => {
-         if (input.id === id) {
-            return { ...input, value: value };
-         } else {
-            return input;
-         }
-      });
+      //Find the object where id is equal to given id in function then update its value to be the given value in function
+      const updateValue = (obj) => {
+         if (obj !== null && typeof obj === "object") {
+            if (obj.id === id) {
+               return { ...obj, value: value };
+            }
 
-      setInputData(updatedInputData);
+            const newObject = {};
+            for (const key in obj) {
+               newObject[key] = updateValue(obj[key]);
+            }
+
+            return newObject;
+         }
+         return obj;
+      };
+
+      setInputData((prev) =>
+         prev.map((inputSection) => updateValue(inputSection)),
+      );
    };
 
    return (

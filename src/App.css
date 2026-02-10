@@ -111,8 +111,6 @@ li {
 .input-field {
    display: flex;
    flex-direction: column;
-
-   margin: 0 0 1vh 0;
 }
 
 .input-field input {
@@ -204,7 +202,7 @@ li {
    width: 4vw;
 }
 
-.preview-name {
+.preview-personal {
    font-size: clamp(1.5rem, 5vw, 1.8rem);
    text-align: center;
 }
@@ -217,40 +215,40 @@ li {
    padding: 0;
 }
 
-.preview-education-date {
+.preview-schoolDate {
    grid-row: 1 / 2;
    align-self: flex-start;
 }
 
-.preview-education-date li + li,
-.preview-experience-date li + li {
+.preview-schoolDate li + li,
+.preview-experienceDate li + li {
    display: flex;
    gap: 2vw;
 }
 
-.preview-education-date li + li::before,
-.preview-experience-date li + li::before {
+.preview-schoolDate li + li::before,
+.preview-experienceDate li + li::before {
    content: "-";
 }
 
-.preview-school-info {
+.preview-schoolInfo {
    flex-direction: column;
    align-self: flex-start;
 }
 
-.preview-school-info li:nth-child(1),
-.preview-company-position li:nth-child(1) {
+.preview-schoolInfo li:nth-child(1),
+.preview-companyPosition li:nth-child(1) {
    font-size: clamp(1.2rem, 5vw, 1.5rem);
    color: var(--light-blue);
    font-weight: bold;
 }
 
-.preview-experience-date {
+.preview-experienceDate {
    display: flex;
    align-self: flex-start;
 }
 
-.preview-company-position {
+.preview-companyPosition {
    grid-area: 1 / 2 / 2 / -1;
    display: flex;
    flex-direction: column;
@@ -258,7 +256,7 @@ li {
    gap: 0;
 }
 
-.preview-company-position li + li {
+.preview-companyPosition li + li {
    font-size: clamp(1.1rem, 4vw, 1.4rem);
 }
 

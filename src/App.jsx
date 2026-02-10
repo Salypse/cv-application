@@ -10,25 +10,15 @@ import { educationalInputFields } from "./data/educationInputFields";
 import { experienceInputFields } from "./data/experienceInputFields";
 
 export function App() {
-   const [personalInputData, setPersonalInputData] = useState(
-      personalInputFields.map((field) => ({
-         ...field,
-         value: "",
-      })),
-   );
+   const [personalInputData, setPersonalInputData] =
+      useState(personalInputFields);
 
    const [educationalInputData, setEducationalInputData] = useState(
-      educationalInputFields.map((field) => ({
-         ...field,
-         value: "",
-      })),
+      educationalInputFields,
    );
 
    const [experienceInputData, setExperienceInputData] = useState(
-      experienceInputFields.map((field) => ({
-         ...field,
-         value: "",
-      })),
+      experienceInputFields,
    );
 
    return (
