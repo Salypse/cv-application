@@ -2,9 +2,9 @@ export function PreviewSection({ header, inputData, sectionName }) {
    return (
       <div className="preview-section">
          {header && <h2>{header}</h2>}
-         <ul className={sectionName}>
-            {inputData.map((inputSection) =>
-               Object.entries(inputSection).map(([rowName, rowData]) => (
+         {inputData.map((inputSection, index) => (
+            <ul key={`${sectionName}${index}`} className={sectionName}>
+               {Object.entries(inputSection).map(([rowName, rowData]) => (
                   <div key={rowName} className={`row preview-${rowName}`}>
                      {Object.values(rowData).map((input) => (
                         <li key={input.id}>
@@ -15,9 +15,9 @@ export function PreviewSection({ header, inputData, sectionName }) {
                         </li>
                      ))}
                   </div>
-               )),
-            )}
-         </ul>
+               ))}
+            </ul>
+         ))}
       </div>
    );
 }

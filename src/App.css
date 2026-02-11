@@ -32,6 +32,12 @@ li {
    width: 100%;
 }
 
+button {
+   padding: 2vw 3vw;
+   border-radius: 2vw;
+   font-size: clamp(0.9rem, 3vw, 1.2rem);
+}
+
 .maker-header {
    display: flex;
    align-items: center;
@@ -85,6 +91,10 @@ li {
    margin-bottom: 5vh;
 }
 
+.input-section ul {
+   margin-bottom: 2.5vh;
+}
+
 .input-section-header {
    display: flex;
    justify-content: space-between;
@@ -100,12 +110,6 @@ li {
 .input-header-buttons {
    display: flex;
    gap: 2vw;
-}
-
-.input-header-buttons button {
-   padding: 2vw 3vw;
-   border-radius: 2vw;
-   font-size: clamp(0.9rem, 3vw, 1.2rem);
 }
 
 .input-field {
@@ -125,6 +129,15 @@ li {
    font-size: clamp(1.1rem, 4vw, 1.6rem);
    font-weight: bold;
    margin-bottom: 0.5vh;
+}
+
+.add-input {
+   display: flex;
+   justify-self: center;
+
+   border-color: var(--dark-blue);
+   background-color: var(--light-blue);
+   color: var(--white);
 }
 
 .row {
@@ -162,7 +175,7 @@ li {
    font-size: var(--input-preview-text);
 }
 
-.preview-section ul:not(:first-child) {
+.live-preview .preview-section:not(:first-child) > ul:last-child {
    margin: 2vw 0;
    border-bottom: 0.5vh solid var(--light-grey);
 }

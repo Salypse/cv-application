@@ -2,8 +2,14 @@ import { useState } from "react";
 
 import { Input } from "./input";
 import { InputSectionHeader } from "./InputSectionHeader";
+import { addInput } from "./addInput";
 
-export function InputSection({ inputData, setInputData, sectionName }) {
+export function InputSection({
+   inputData,
+   setInputData,
+   sectionName,
+   addInputButton = false,
+}) {
    const [showInputs, setShowInputs] = useState(true);
 
    return (
@@ -12,10 +18,13 @@ export function InputSection({ inputData, setInputData, sectionName }) {
             name={sectionName}
             setShowInputs={setShowInputs}
          ></InputSectionHeader>
-         {showInputs && (
-            <ul id={`${sectionName.toLowerCase()}-inputs`}>
-               {inputData.map((inputSection) =>
-                  Object.entries(inputSection).map(([rowName, inputRow]) => (
+         {showInputs &&
+            inputData.map((inputSection, index) => (
+               <ul
+                  key={`${sectionName}${index}`}
+                  id={`${sectionName.toLowerCase()}-inputs`}
+               >
+                  {Object.entries(inputSection).map(([rowName, inputRow]) => (
                      <div key={rowName} className={`row input-${rowName}`}>
                         {Object.values(inputRow).map((input) => (
                            <li key={input.id}>
@@ -31,9 +40,14 @@ export function InputSection({ inputData, setInputData, sectionName }) {
                            </li>
                         ))}
                      </div>
-                  )),
-               )}
-            </ul>
+                  ))}
+               </ul>
+            ))}
+         {addInputButton && (
+            <button
+               className="add-input"
+               onClick={() => addInput(inputData, setInputData)}
+            >{`Add ${sectionName}`}</button>
          )}
       </div>
    );
