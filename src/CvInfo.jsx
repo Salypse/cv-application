@@ -20,12 +20,14 @@ function CvInfo({
             setInputData={setEducationalInputData}
             sectionName="Education"
             addInputButton={true}
+            isDeletable={true}
          ></InputSection>
          <InputSection
             inputData={experienceInputData}
             setInputData={setExperienceInputData}
             sectionName="Experience"
             addInputButton={true}
+            isDeletable={true}
          ></InputSection>
       </section>
    );

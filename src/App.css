@@ -140,6 +140,19 @@ button {
    color: var(--white);
 }
 
+.delete-input {
+   display: flex;
+   justify-self: flex-end;
+
+   padding: 0;
+   border: none;
+}
+
+.delete-input img {
+   width: 5vw;
+   height: auto;
+}
+
 .row {
    display: flex;
 
