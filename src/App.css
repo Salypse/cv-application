@@ -138,10 +138,16 @@ button:focus-visible {
 
 .input-field input {
    width: 100%;
-   height: 4vh;
+   height: 100%;
    padding: 1vw;
 
+   border: 0.5vw solid var(--light-grey);
    font-size: clamp(1rem, 3vw, 1.4rem);
+}
+
+.input-field input:focus {
+   outline: 3px solid var(--light-blue);
+   border: none;
 }
 
 .input-field label {
