@@ -60,7 +60,7 @@ export function InputSection({
          {addInputButton && (
             <button
                className="add-input"
-               onClick={() => addInput(inputData, setInputData)}
+               onClick={() => addInput(inputData, setInputData, sectionName)}
             >{`Add ${sectionName}`}</button>
          )}
       </div>
