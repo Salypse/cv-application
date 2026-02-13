@@ -22,46 +22,56 @@ export function InputSection({
             name={sectionName}
             setShowInputs={setShowInputs}
          ></InputSectionHeader>
-         {showInputs &&
-            inputData.map((inputSection, index) => (
-               <ul
-                  key={`${sectionName}${index}`}
-                  id={`${sectionName.toLowerCase()}-inputs`}
-               >
-                  {isDeletable && (
-                     <button
-                        className="delete-input"
-                        onClick={() =>
-                           deleteInput(inputData, setInputData, index)
-                        }
-                     >
-                        <img src={DeleteIcon}></img>
-                     </button>
-                  )}
-                  {Object.entries(inputSection).map(([rowName, inputRow]) => (
-                     <div key={rowName} className={`row input-${rowName}`}>
-                        {Object.values(inputRow).map((input) => (
-                           <li key={input.id}>
-                              <Input
-                                 inputName={input.name}
-                                 placeholder={input.placeholder}
-                                 type={input.type}
-                                 id={input.id}
-                                 value={input.value}
-                                 inputData={inputData}
-                                 setInputData={setInputData}
-                              ></Input>
-                           </li>
-                        ))}
-                     </div>
-                  ))}
-               </ul>
-            ))}
-         {addInputButton && (
-            <button
-               className="add-input"
-               onClick={() => addInput(inputData, setInputData, sectionName)}
-            >{`Add ${sectionName}`}</button>
+         {showInputs && (
+            <>
+               {inputData.map((inputSection, index) => (
+                  <ul
+                     key={`${sectionName}${index}`}
+                     id={`${sectionName.toLowerCase()}-inputs`}
+                  >
+                     {isDeletable && (
+                        <button
+                           className="delete-input"
+                           onClick={() =>
+                              deleteInput(inputData, setInputData, index)
+                           }
+                        >
+                           <img src={DeleteIcon}></img>
+                        </button>
+                     )}
+                     {Object.entries(inputSection).map(
+                        ([rowName, inputRow]) => (
+                           <div
+                              key={rowName}
+                              className={`row input-${rowName}`}
+                           >
+                              {Object.values(inputRow).map((input) => (
+                                 <li key={input.id}>
+                                    <Input
+                                       inputName={input.name}
+                                       placeholder={input.placeholder}
+                                       type={input.type}
+                                       id={input.id}
+                                       value={input.value}
+                                       inputData={inputData}
+                                       setInputData={setInputData}
+                                    ></Input>
+                                 </li>
+                              ))}
+                           </div>
+                        ),
+                     )}
+                  </ul>
+               ))}
+               {addInputButton && (
+                  <button
+                     className="add-input"
+                     onClick={() =>
+                        addInput(inputData, setInputData, sectionName)
+                     }
+                  >{`Add ${sectionName}`}</button>
+               )}
+            </>
          )}
       </div>
    );
