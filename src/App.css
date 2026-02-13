@@ -18,10 +18,13 @@
 #root {
    width: 100%;
 
+   background-color: var(--dark-white);
+}
+
+.content {
    display: flex;
    flex-direction: column;
    align-items: center;
-   background-color: var(--dark-white);
 }
 
 ul {
@@ -33,9 +36,9 @@ li {
 }
 
 button {
-   padding: 1.5vw 2vw;
+   padding: 0.5vw 1vw;
    border-radius: 2vw;
-   font-size: clamp(0.9rem, 3vw, 1.2rem);
+   font-size: clamp(1rem, 3vw, 1.2rem);
    transition:
       transform 0.3s ease-in-out,
       box-shadow 0.3s ease-in-out;
@@ -88,7 +91,7 @@ button:focus-visible {
 
    text-decoration: underline;
    font-weight: bold;
-   font-size: 1.2rem;
+   font-size: clamp(1.2rem, 3vw, 1.6rem);
 }
 
 .scroll-text img {
@@ -110,8 +113,8 @@ button:focus-visible {
    margin-bottom: 5vh;
 }
 
-.input-section ul {
-   margin-bottom: 2.5vh;
+.input-section .row:first-of-type {
+   padding-top: 0;
 }
 
 .input-section-header {
@@ -120,6 +123,7 @@ button:focus-visible {
    align-items: center;
 
    margin-bottom: 2vh;
+   font-size: clamp(0.75rem, 5vw, 1.1rem);
 }
 
 .input-section-header h2 {
@@ -141,17 +145,17 @@ button:focus-visible {
    height: 100%;
    padding: 1vw;
 
-   border: 0.5vw solid var(--light-grey);
-   font-size: clamp(1rem, 3vw, 1.4rem);
+   border: 0.25vw solid var(--light-grey);
+   font-size: 1rem;
 }
 
 .input-field input:focus {
-   outline: 3px solid var(--light-blue);
+   outline: 0.25vw solid var(--light-blue);
    border: none;
 }
 
 .input-field label {
-   font-size: clamp(1.1rem, 4vw, 1.6rem);
+   font-size: clamp(1rem, 4vw, 1.3rem);
    font-weight: bold;
    margin-bottom: 0.5vh;
 }
@@ -159,6 +163,7 @@ button:focus-visible {
 .add-input {
    display: flex;
    justify-self: center;
+   margin-top: 1vw;
 }
 
 .delete-input {
@@ -166,6 +171,7 @@ button:focus-visible {
    justify-self: flex-end;
 
    padding: 0;
+   margin-top: 1vh;
    border: none;
 }
 
@@ -211,13 +217,14 @@ button:focus-visible {
 }
 
 .live-preview .preview-section:not(:first-child) > ul:last-child {
-   margin: 2vw 0;
    border-bottom: 0.5vh solid var(--light-grey);
 }
 
 .preview-section h2 {
    margin-top: 2vh;
    padding: 0 1vw;
+
+   font-size: clamp(1rem, 4vw, 1.2rem);
    color: var(--dark-blue);
    font-weight: bold;
    text-decoration: underline;
@@ -238,6 +245,7 @@ button:focus-visible {
 .educational-input-preview {
    grid-template-rows: 1fr;
    grid-template-columns: auto 1fr;
+   margin-bottom: 1vh;
 }
 
 .experience-input-preview {
@@ -250,8 +258,12 @@ button:focus-visible {
    width: 4vw;
 }
 
-.preview-personal {
-   font-size: clamp(1.5rem, 5vw, 1.8rem);
+.personal-input-preview p {
+   font-size: clamp(1rem, 3vw, 1.25rem);
+}
+
+.preview-personal p {
+   font-size: clamp(1.5rem, 5vw, 2rem);
    text-align: center;
 }
 
@@ -266,27 +278,29 @@ button:focus-visible {
 .preview-schoolDate {
    grid-row: 1 / 2;
    align-self: flex-start;
+   font-size: clamp(1rem, 3vw, 1.25rem);
 }
 
 .preview-schoolDate li + li,
 .preview-experienceDate li + li {
    display: flex;
-   gap: 2vw;
 }
 
 .preview-schoolDate li + li::before,
 .preview-experienceDate li + li::before {
-   content: "-";
+   content: " - ";
+   margin-right: 1vw;
 }
 
 .preview-schoolInfo {
    flex-direction: column;
    align-self: flex-start;
+   font-size: clamp(1rem, 3vw, 1.25rem);
 }
 
 .preview-schoolInfo li:nth-child(1),
 .preview-companyPosition li:nth-child(1) {
-   font-size: clamp(1.2rem, 5vw, 1.5rem);
+   font-size: clamp(1.2rem, 5vw, 1.4rem);
    color: var(--light-blue);
    font-weight: bold;
 }
@@ -294,6 +308,7 @@ button:focus-visible {
 .preview-experienceDate {
    display: flex;
    align-self: flex-start;
+   font-size: clamp(1rem, 3vw, 1.25rem);
 }
 
 .preview-companyPosition {
@@ -305,9 +320,85 @@ button:focus-visible {
 }
 
 .preview-companyPosition li + li {
-   font-size: clamp(1.1rem, 4vw, 1.4rem);
+   font-size: clamp(1.1rem, 4vw, 1.25rem);
 }
 
 .preview-responsibilities {
    grid-area: 2 / 2 / -1 / -1;
+   font-size: clamp(1rem, 3vw, 1.25rem);
+}
+
+@media (min-width: 800px) {
+   .cv-info,
+   .live-preview {
+      width: 80vw;
+   }
+
+   .delete-input img {
+      width: 3vw;
+   }
+
+   .preview-section ul {
+      gap: 0;
+   }
+}
+
+@media (min-width: 1200px) {
+   .scroll-text {
+      display: none;
+   }
+
+   .content {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      flex-direction: row;
+      gap: 3vw;
+   }
+
+   .cv-info {
+      padding: 2vw;
+      width: 35vw;
+   }
+
+   .input-section {
+      margin-bottom: 3vh;
+   }
+
+   .input-section .row {
+      padding-bottom: 0;
+   }
+
+   .input-section-header {
+      margin-bottom: 1vh;
+   }
+
+   .input-header-buttons {
+      gap: 1vw;
+   }
+
+   .input-field input {
+      padding: 0.5vw;
+   }
+
+   .delete-input img {
+      width: 1.8vw;
+   }
+
+   .live-preview {
+      height: 100vh;
+      width: 45vw;
+   }
+
+   .personal-input-preview img {
+      width: 1.3vw;
+   }
+
+   .personal-input-preview .row {
+      padding: 0.5vw;
+   }
+
+   .preview-availability li {
+      gap: 0.3vw;
+   }
 }

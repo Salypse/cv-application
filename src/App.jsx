@@ -25,33 +25,35 @@ export function App() {
       <>
          <CvSiteHeader></CvSiteHeader>
          <ScrollText></ScrollText>
-         <CvInfo
-            //Personal Input
-            personalInputData={personalInputData}
-            setPersonalInputData={setPersonalInputData}
-            //Educational Input
-            educationalInputData={educationalInputData}
-            setEducationalInputData={setEducationalInputData}
-            //Experience Input
-            experienceInputData={experienceInputData}
-            setExperienceInputData={setExperienceInputData}
-         ></CvInfo>
+         <section className="content">
+            <CvInfo
+               //Personal Input
+               personalInputData={personalInputData}
+               setPersonalInputData={setPersonalInputData}
+               //Educational Input
+               educationalInputData={educationalInputData}
+               setEducationalInputData={setEducationalInputData}
+               //Experience Input
+               experienceInputData={experienceInputData}
+               setExperienceInputData={setExperienceInputData}
+            ></CvInfo>
 
-         <section className="live-preview">
-            <PreviewSection
-               inputData={personalInputData}
-               sectionName={"personal-input-preview"}
-            ></PreviewSection>
-            <PreviewSection
-               header="Education"
-               inputData={educationalInputData}
-               sectionName={"educational-input-preview"}
-            ></PreviewSection>
-            <PreviewSection
-               header="Experience"
-               inputData={experienceInputData}
-               sectionName={"experience-input-preview"}
-            ></PreviewSection>
+            <section className="live-preview">
+               <PreviewSection
+                  inputData={personalInputData}
+                  sectionName={"personal-input-preview"}
+               ></PreviewSection>
+               <PreviewSection
+                  header="Education"
+                  inputData={educationalInputData}
+                  sectionName={"educational-input-preview"}
+               ></PreviewSection>
+               <PreviewSection
+                  header="Experience"
+                  inputData={experienceInputData}
+                  sectionName={"experience-input-preview"}
+               ></PreviewSection>
+            </section>
          </section>
       </>
    );
