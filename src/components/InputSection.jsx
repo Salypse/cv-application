@@ -2,10 +2,10 @@ import { useState } from "react";
 
 import { Input } from "./input";
 import { InputSectionHeader } from "./InputSectionHeader";
-import { addInput } from "./addInput";
-import { deleteInput } from "./deleteInput";
+import { addInput } from "../addInput";
+import { deleteInput } from "../deleteInput";
 
-import DeleteIcon from "./assets/img/delete-icon.svg";
+import DeleteIcon from "../assets/img/delete-icon.svg";
 
 export function InputSection({
    inputData,

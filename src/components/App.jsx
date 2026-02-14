@@ -5,9 +5,9 @@ import { ScrollText } from "./ScrollText";
 import CvInfo from "./CvInfo";
 import { PreviewSection } from "./PreviewSection";
 
-import { personalInputFields } from "./data/personalInputFields";
-import { educationalInputFields } from "./data/educationInputFields";
-import { experienceInputFields } from "./data/experienceInputFields";
+import { personalInputFields } from "../data/personalInputFields";
+import { educationalInputFields } from "../data/educationInputFields";
+import { experienceInputFields } from "../data/experienceInputFields";
 
 export function App() {
    const [personalInputData, setPersonalInputData] =

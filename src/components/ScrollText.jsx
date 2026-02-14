@@ -1,4 +1,4 @@
-import ScrollLogo from "./assets/img/scroll-down.svg";
+import ScrollLogo from "../assets/img/scroll-down.svg";
 
 export function ScrollText() {
    return (

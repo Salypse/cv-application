@@ -1,4 +1,4 @@
-import HeaderLogo from "./assets/img/cv-header-icon.svg";
+import HeaderLogo from "../assets/img/cv-header-icon.svg";
 
 export function CvSiteHeader() {
    return (
