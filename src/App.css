@@ -125,11 +125,6 @@ button:focus-visible {
    font-size: clamp(0.75rem, 5vw, 1.1rem);
 }
 
-.input-header-buttons {
-   display: flex;
-   gap: 2vw;
-}
-
 .input-field {
    display: flex;
    flex-direction: column;

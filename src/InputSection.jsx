@@ -21,6 +21,7 @@ export function InputSection({
          <InputSectionHeader
             name={sectionName}
             setShowInputs={setShowInputs}
+            showInputs={showInputs}
          ></InputSectionHeader>
          {showInputs && (
             <>
