@@ -9,7 +9,7 @@ export function PreviewSection({ header, inputData, sectionName }) {
                      {Object.values(rowData).map((input) => (
                         <div key={input.id}>
                            {input.img && input.value && (
-                              <img src={input.img}></img>
+                              <img src={input.img} alt={input.alt}></img>
                            )}
                            <p>{input.value}</p>
                         </div>

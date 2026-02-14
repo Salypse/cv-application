@@ -36,7 +36,7 @@ export function InputSection({
                               deleteInput(inputData, setInputData, index)
                            }
                         >
-                           <img src={DeleteIcon}></img>
+                           <img src={DeleteIcon} alt="delete"></img>
                         </button>
                      )}
                      {Object.entries(inputSection).map(

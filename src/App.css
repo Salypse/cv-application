@@ -89,7 +89,6 @@ button:focus-visible {
    padding: 1vw;
    margin-top: 1vh;
 
-   text-decoration: underline;
    font-weight: bold;
    font-size: clamp(1.2rem, 3vw, 1.6rem);
 }
@@ -124,10 +123,6 @@ button:focus-visible {
 
    margin-bottom: 2vh;
    font-size: clamp(0.75rem, 5vw, 1.1rem);
-}
-
-.input-section-header h2 {
-   text-decoration: underline;
 }
 
 .input-header-buttons {
@@ -232,7 +227,6 @@ button:focus-visible {
    font-size: clamp(1rem, 4vw, 1.2rem);
    color: var(--dark-blue);
    font-weight: bold;
-   text-decoration: underline;
    text-decoration-color: var(--light-blue);
 }
 
