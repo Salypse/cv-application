@@ -41,24 +41,20 @@ export function InputSection({
                      )}
                      {Object.entries(inputSection).map(
                         ([rowName, inputRow]) => (
-                           <div
-                              key={rowName}
-                              className={`row input-${rowName}`}
-                           >
+                           <li key={rowName} className={`row input-${rowName}`}>
                               {Object.values(inputRow).map((input) => (
-                                 <li key={input.id}>
-                                    <Input
-                                       inputName={input.name}
-                                       placeholder={input.placeholder}
-                                       type={input.type}
-                                       id={input.id}
-                                       value={input.value}
-                                       inputData={inputData}
-                                       setInputData={setInputData}
-                                    ></Input>
-                                 </li>
+                                 <Input
+                                    key={input.id}
+                                    inputName={input.name}
+                                    placeholder={input.placeholder}
+                                    type={input.type}
+                                    id={input.id}
+                                    value={input.value}
+                                    inputData={inputData}
+                                    setInputData={setInputData}
+                                 ></Input>
                               ))}
-                           </div>
+                           </li>
                         ),
                      )}
                   </ul>
